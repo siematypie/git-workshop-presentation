@@ -1,5 +1,14 @@
 #load "utils/command-line.csx"
 
+Logger.LogInfo("Please enter your full name");
+var fullName = Console.ReadLine();
+
+Logger.LogInfo("Please enter your channelengine email");
+var email = Console.ReadLine();
+
+var userInfoSetup = CommandLine.Execute($"git config user.name {fullName} && git config user.email {email}", "Setting up commit author information"); // setting up commit author information
+Logger.LogSuccess($"From now on your commits will have following author: {fullName} <{email}>");
+
 var branchesCheckout = CommandLine.Execute("git checkout production && git checkout development && git checkout acceptance"); // to fetch all git flow branches from origin
 if (branchesCheckout.IsError) {
     return branchesCheckout.ShowOutput();
