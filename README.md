@@ -5,7 +5,7 @@ Once you clone the repository, please open terminal in the root folder and run f
 and 
 `dotnet script .hooks\repo-init.csx`
 
-In this repo, you'll find amazing dutch fairytale called The Boy Who Wanted More Cheese. However, you'll notice that some sentences are missing! Those sentences are in separate files called Sentence_<sentence_number> where number corresponds to the number of missing sentence in the story.
+In this repo, you'll find amazing dutch fairytale called The Boy Who Wanted More Cheese. However, you'll notice that some sentences are missing! Those sentences are in separate files called Sentence_<sentence_number> where number corresponds to the number of missing sentence in the story. For example, first missing sentence Sentence_1.txt should contain missing piece of sentence marked as [1] in The Boy Who Wanted More Cheese.txt
 
 But wait! If you read the sentences, you'll notice that there's something fishy about them... Better check out if everything aligns with the original story. You can find the link to it in file tale_url.txt
 It seems that some of them will require hotfix!
@@ -26,6 +26,7 @@ Ok, now all bugz seems to be gone! Time add missing sentences ("features") to th
 ## Task 2:
 1. Create feature branch from the development branch
 2. Paste your sentences to correct places in the story
+3. Remove sentence files you pasted. For example, if you pasted first sentence, remove file Sentence_1.txt
 3. Commit the changes and push them to the remote repository
 4. Create pull request targeting development, pick a reviewer 
 5. Once the reviewer accepts your pull request, merge it
